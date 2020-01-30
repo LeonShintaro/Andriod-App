@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#FF4040"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/bt_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/back" />
+
+                <TextView
+                    android:layout_width="270dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Food Menu"
+                    android:textColor="#fff"
+                    android:textSize="17dp" />
+
+                <ImageView
+                    android:id="@+id/bt_config"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/bt_03" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#FFE4B5"
+                >
+                <TextView
+                    android:id="@+id/name_01"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Coffe"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    />
+                <TextView
+                    android:id="@+id/ene_01"
+                    android:layout_marginLeft="70dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="4KJ"
+                    android:gravity="center"/>
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/ti_01_add"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/add_ti"
+
+                    />
+                <TextView
+                    android:id="@+id/ti_tv_01"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="0"
+                    android:gravity="center"/>
+                <ImageView
+                    android:id="@+id/ti_01_dl"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/de_ti"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#FFE4B5"
+                >
+                <TextView
+                    android:id="@+id/name_02"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Salad"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    />
+                <TextView
+                    android:id="@+id/ene_02"
+                    android:layout_marginLeft="70dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="544KJ"
+                    android:gravity="center"/>
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/ti_02_add"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/add_ti"
+
+                    />
+                <TextView
+                    android:id="@+id/ti_tv_02"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="0"
+                    android:gravity="center"/>
+                <ImageView
+                    android:id="@+id/ti_02_dl"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/de_ti"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#FFE4B5"
+                >
+                <TextView
+                    android:id="@+id/name_03"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Soft Drink"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    />
+                <TextView
+                    android:id="@+id/ene_03"
+                    android:layout_marginLeft="70dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="172KJ"
+                    android:gravity="center"/>
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/ti_03_add"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/add_ti"
+
+                    />
+                <TextView
+                    android:id="@+id/ti_tv_03"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="0"
+                    android:gravity="center"/>
+                <ImageView
+                    android:id="@+id/ti_03_dl"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/de_ti"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#FFE4B5"
+                >
+                <TextView
+                    android:id="@+id/name_04"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Nuts"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    />
+                <TextView
+                    android:id="@+id/ene_05"
+                    android:layout_marginLeft="70dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="1800KJ"
+                    android:gravity="center"/>
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/ti_04_add"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/add_ti"
+
+                    />
+                <TextView
+                    android:id="@+id/ti_tv_04"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="0"
+                    android:gravity="center"/>
+                <ImageView
+                    android:id="@+id/ti_04_dl"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/de_ti"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#FFE4B5"
+                >
+                <TextView
+                    android:id="@+id/name_05"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Chicken"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    />
+                <TextView
+                    android:id="@+id/ene_05"
+                    android:layout_marginLeft="70dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="752KJ"
+                    android:gravity="center"/>
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/ti_05_add"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/add_ti"
+
+                    />
+                <TextView
+                    android:id="@+id/ti_tv_05"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="0"
+                    android:gravity="center"/>
+                <ImageView
+                    android:id="@+id/ti_05_dl"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/de_ti"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#FFE4B5"
+                >
+                <TextView
+                    android:id="@+id/name_06"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Beef"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    />
+                <TextView
+                    android:id="@+id/ene_06"
+                    android:layout_marginLeft="70dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="1152KJ"
+                    android:gravity="center"/>
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/ti_06_add"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/add_ti"
+
+                    />
+                <TextView
+                    android:id="@+id/ti_tv_06"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="0"
+                    android:gravity="center"/>
+                <ImageView
+                    android:id="@+id/ti_06_dl"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/de_ti"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#FFE4B5"
+                >
+                <TextView
+                    android:id="@+id/name_07"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Rolls"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    />
+                <TextView
+                    android:id="@+id/ene_07"
+                    android:layout_marginLeft="70dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="1064KJ"
+                    android:gravity="center"/>
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/ti_07_add"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/add_ti"
+
+                    />
+                <TextView
+                    android:id="@+id/ti_tv_07"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="0"
+                    android:gravity="center"/>
+                <ImageView
+                    android:id="@+id/ti_07_dl"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/de_ti"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#FFE4B5"
+                >
+                <TextView
+                    android:id="@+id/name_08"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Pork"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    />
+                <TextView
+                    android:id="@+id/ene_08"
+                    android:layout_marginLeft="70dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="1084KJ"
+                    android:gravity="center"/>
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/ti_08_add"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/add_ti"
+
+                    />
+                <TextView
+                    android:id="@+id/ti_tv_08"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="0"
+                    android:gravity="center"/>
+                <ImageView
+                    android:id="@+id/ti_08_dl"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/de_ti"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#FFE4B5"
+                >
+                <TextView
+                    android:id="@+id/name_09"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Burger"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    />
+                <TextView
+                    android:id="@+id/ene_09"
+                    android:layout_marginLeft="70dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="1168KJ"
+                    android:gravity="center"/>
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/ti_09_add"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/add_ti"
+
+                    />
+                <TextView
+                    android:id="@+id/ti_tv_09"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="0"
+                    android:gravity="center"/>
+                <ImageView
+                    android:id="@+id/ti_09_dl"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/de_ti"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#FFE4B5"
+                >
+                <TextView
+                    android:id="@+id/name_10"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Alchol"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    />
+                <TextView
+                    android:id="@+id/ene_10"
+                    android:layout_marginLeft="70dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="1352KJ"
+                    android:gravity="center"/>
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/ti_10_add"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/add_ti"
+
+                    />
+                <TextView
+                    android:id="@+id/ti_tv_10"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="0"
+                    android:gravity="center"/>
+                <ImageView
+                    android:id="@+id/ti_10_dl"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/de_ti"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#FFE4B5"
+                >
+                <TextView
+                    android:id="@+id/name_11"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Dairy"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    />
+                <TextView
+                    android:id="@+id/ene_11"
+                    android:layout_marginLeft="70dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="288KJ"
+                    android:gravity="center"/>
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/ti_11_add"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/add_ti"
+
+                    />
+                <TextView
+                    android:id="@+id/ti_tv_11"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="0"
+                    android:gravity="center"/>
+                <ImageView
+                    android:id="@+id/ti_11_dl"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/de_ti"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#fff"/>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -18,6 +18,8 @@ public class add_activity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_add);
         bt_back =findViewById(R.id.bt_back);
         bt_add_f =findViewById(R.id.bt_add_f);
+        bt_back.setOnClickListener(this);
+        bt_add_f.setOnClickListener(this);
     }
 
     @Override
@@ -27,7 +29,7 @@ public class add_activity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(add_activity.this,Mainactivity.class));finish();
         }
         if(v.getId() == R.id.bt_add_f){
-
+            startActivity(new Intent(add_activity.this,Food_menu_activity.class));finish();
 
         }
     }

@@ -29,7 +29,6 @@ public class StatusBarUtil {
     @interface ViewType {
     }
 
-
     public static void setStatusBarColor(Activity activity, int colorId) {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -46,13 +45,16 @@ public class StatusBarUtil {
     @TargetApi(19)
     public static void setTranslucentStatus(Activity activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
             Window window = activity.getWindow();
             View decorView = window.getDecorView();
+
             int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                     | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
             decorView.setSystemUiVisibility(option);
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(Color.TRANSPARENT);
+
             //window.setNavigationBarColor(Color.TRANSPARENT);
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window window = activity.getWindow();
@@ -88,7 +90,7 @@ public class StatusBarUtil {
                 setStatusBarFontIconDark(activity, TYPE_MIUI, dark);
             } else if (OSutil.isFlyme()) {
                 setStatusBarFontIconDark(activity, TYPE_FLYME, dark);
-            } else {
+            } else {//其他情况
                 return false;
             }
 
@@ -162,7 +164,7 @@ public class StatusBarUtil {
             int darkModeFlag = field.getInt(layoutParams);
             Method extraFlagField = clazz.getDeclaredMethod("setExtraFlags", int.class, int.class);
             extraFlagField.setAccessible(true);
-            if (dark) {
+            if (dark) {    //状态栏亮色且黑色字体
                 extraFlagField.invoke(window, darkModeFlag, darkModeFlag);
             } else {
                 extraFlagField.invoke(window, 0, darkModeFlag);

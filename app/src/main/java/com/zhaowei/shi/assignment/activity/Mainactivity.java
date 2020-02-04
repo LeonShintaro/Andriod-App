@@ -62,26 +62,26 @@ public class Mainactivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         FragmentTransaction transaction =fragmentManager.beginTransaction();
-        hideAllFragment(transaction);
-        if(v.getId() == R.id.bt_01){
-            Toast.makeText(getApplicationContext(),"ok",Toast.LENGTH_SHORT).show();
-            if(fragment_01 == null){fragment_01 =new Fragment_01();transaction.add(R.id.ly_content,fragment_01);}
-            else{transaction.show(fragment_01);}
+            hideAllFragment(transaction);
+            if(v.getId() == R.id.bt_01){
+                Toast.makeText(getApplicationContext(),"ok",Toast.LENGTH_SHORT).show();
+                if(fragment_01 == null){fragment_01 =new Fragment_01();transaction.add(R.id.ly_content,fragment_01);}
+                else{transaction.show(fragment_01);}
 
-        }
-        if(v.getId() == R.id.bt_02){
-            Toast.makeText(getApplicationContext(),"ok",Toast.LENGTH_SHORT).show();
-            if(fragment_02 == null){fragment_02 =new Fragment_02();transaction.add(R.id.ly_content,fragment_02);}
-            else{transaction.show(fragment_02);}
+            }
+            if(v.getId() == R.id.bt_02){
+                Toast.makeText(getApplicationContext(),"ok",Toast.LENGTH_SHORT).show();
+                if(fragment_02 == null){fragment_02 =new Fragment_02();transaction.add(R.id.ly_content,fragment_02);}
+                else{transaction.show(fragment_02);}
 
-        }
-        if(v.getId() == R.id.bt_03){
-            Toast.makeText(getApplicationContext(),"ok",Toast.LENGTH_SHORT).show();
-            if(fragment_03 == null){fragment_03 =new Fragment_03();transaction.add(R.id.ly_content,fragment_03);}
-            else{transaction.show(fragment_03);}
+            }
+            if(v.getId() == R.id.bt_03){
+                Toast.makeText(getApplicationContext(),"ok",Toast.LENGTH_SHORT).show();
+                if(fragment_03 == null){fragment_03 =new Fragment_03();transaction.add(R.id.ly_content,fragment_03);}
+                else{transaction.show(fragment_03);}
 
-        }
+            }
 
-        transaction.commit();
+            transaction.commit();
     }
 }

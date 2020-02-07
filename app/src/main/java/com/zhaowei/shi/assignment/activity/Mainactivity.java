@@ -1,5 +1,6 @@
 package com.zhaowei.shi.assignment.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
@@ -24,6 +25,9 @@ public class Mainactivity extends AppCompatActivity implements View.OnClickListe
     private Fragment_02 fragment_02;
     private Fragment_03 fragment_03;
 
+    private String month_ene;
+    private String week_ene;
+    private String day_ene;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,9 +41,22 @@ public class Mainactivity extends AppCompatActivity implements View.OnClickListe
 
 
         fragment_02 =new Fragment_02();
+        Bundle bundle =new Bundle();
+        bundle.putString("month",month_ene);
+        bundle.putString("week",week_ene);
+        bundle.putString("day",day_ene);
+        fragment_02.setArguments(bundle);
         transaction_1.add(R.id.ly_content,fragment_02);
         transaction_1.show(fragment_02);
         transaction_1.commit();
+    }
+
+    public void get_data_f_S(){
+        Intent intent =getIntent();
+        Bundle bundle= intent.getExtras();
+        month_ene =bundle.getString("month","NONE");
+        week_ene =bundle.getString("week","NONE");
+        day_ene =bundle.getString("day","NONE");
     }
     private  void bindViews() {
         bt_01 =findViewById(R.id.bt_01);
@@ -71,7 +88,13 @@ public class Mainactivity extends AppCompatActivity implements View.OnClickListe
             }
             if(v.getId() == R.id.bt_02){
                 Toast.makeText(getApplicationContext(),"ok",Toast.LENGTH_SHORT).show();
-                if(fragment_02 == null){fragment_02 =new Fragment_02();transaction.add(R.id.ly_content,fragment_02);}
+                if(fragment_02 == null){fragment_02 =new Fragment_02();
+                    Bundle bundle =new Bundle();
+                    bundle.putString("month",month_ene);
+                    bundle.putString("week",week_ene);
+                    bundle.putString("day",day_ene);
+                    fragment_02.setArguments(bundle);
+                transaction.add(R.id.ly_content,fragment_02);}
                 else{transaction.show(fragment_02);}
 
             }
@@ -81,7 +104,6 @@ public class Mainactivity extends AppCompatActivity implements View.OnClickListe
                 else{transaction.show(fragment_03);}
 
             }
-
             transaction.commit();
     }
 }

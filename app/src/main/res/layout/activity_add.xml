@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="#FF4040"
-                android:gravity="center"
-                >
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/bt_back"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@mipmap/back"
-                    />
+                    android:background="@mipmap/back" />
+
                 <TextView
                     android:layout_width="270dp"
                     android:layout_height="50dp"
@@ -35,37 +42,42 @@
 
 
                 <ImageView
-                    android:id="@+id/bt_shua"
+                    android:id="@+id/bt_refresh"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@mipmap/refresh"
-                    />
+                    android:background="@mipmap/refresh" />
+
                 <ImageView
                     android:id="@+id/bt_add_f"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@mipmap/add_i"
-                    />
+                    android:background="@mipmap/add_i" />
 
             </LinearLayout>
 
             <ListView
                 android:id="@+id/lv_aa"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="500dp">
 
             </ListView>
+
+            <Button
+                android:id="@+id/save_day"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:background="#FF4040"
+                android:text="save"
+                android:textColor="#fff"
+                android:textSize="18dp"
+
+                />
 
         </LinearLayout>
 
 
-
-
-
-
-
-
-
+    </ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>

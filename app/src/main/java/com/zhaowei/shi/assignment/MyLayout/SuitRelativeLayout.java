@@ -21,7 +21,6 @@ public class SuitRelativeLayout extends RelativeLayout {
     public SuitRelativeLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.mContext = context;
-        //RESET
         isMeasured = false;
     }
 

@@ -14,28 +14,29 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            tools:layout_editor_absoluteX="96dp"
-            tools:layout_editor_absoluteY="16dp">
+            android:gravity="center"
+            >
 
             <LinearLayout
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="142dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <TextView
+                    android:textSize="18dp"
+                    android:gravity="center"
                     android:id="@+id/tv_01"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
                     android:background="@mipmap/a_01"/>
 
                 <TextView
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:layout_marginTop="50dp"
                     android:text="Average  Daily  intake"
                     android:textSize="20dp"/>
             </LinearLayout>
@@ -50,21 +51,23 @@
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="142dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center">
                 <TextView
                     android:gravity="center"
                     android:layout_width="250dp"
                     android:layout_height="40dp"
-                    android:layout_marginTop="50dp"
+
                     android:text="Average  Weekly  intake"
                     android:textSize="20dp"/>
 
                 <TextView
+                    android:textSize="18dp"
                     android:id="@+id/tv_02"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
+                    android:gravity="center"
                     android:background="@mipmap/a_01"/>
             </LinearLayout>
 
@@ -78,21 +81,22 @@
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="142dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <TextView
+                    android:textSize="18dp"
                     android:id="@+id/tv_03"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
+                    android:gravity="center"
                     android:background="@mipmap/a_01"/>
 
                 <TextView
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:layout_marginTop="50dp"
                     android:text="Average  Monthly  intake"
                     android:textSize="20dp"/>
             </LinearLayout>

@@ -12,7 +12,7 @@ import com.zhaowei.shi.assignment.R;
 
 import java.util.List;
 
-public class myadapter extends BaseAdapter   {
+public class myadapter extends BaseAdapter {
     private List<food_list_q_item> mylist;
     private LayoutInflater layoutInflater;
     private int num=0;
@@ -37,9 +37,8 @@ public class myadapter extends BaseAdapter   {
     }
 
 
-
-
     public final class Vieholder{
+
         public TextView ti_tv_01;
         public TextView ti_tv_02;
         public TextView  ti_tv_03;
@@ -53,8 +52,8 @@ public class myadapter extends BaseAdapter   {
             vieholder =new Vieholder();
             view =View.inflate(context, R.layout.the_item,null);
             vieholder.ti_tv_01 =(TextView)view.findViewById(R.id.it_tv_01);
-            vieholder.ti_tv_02 =(TextView) view.findViewById(R.id.ti_tv_02);
-            vieholder.ti_tv_03 =(TextView) view.findViewById(R.id.ti_tv_03);
+            vieholder.ti_tv_02 =(TextView) view.findViewById(R.id.it_tv_02);
+            vieholder.ti_tv_03 =(TextView) view.findViewById(R.id.it_tv_03);
             view.setTag(vieholder);
         }else{
             vieholder =(Vieholder) view.getTag();

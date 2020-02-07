@@ -270,7 +270,7 @@ public class Food_menu_activity extends AppCompatActivity implements View.OnClic
 
         if(v.getId() == R.id.save_fm){
 
-            myDataBaseHelper =new MyDataBaseHelper(Food_menu_activity.this,"zhaoweishi",null,1);
+            myDataBaseHelper =new MyDataBaseHelper(Food_menu_activity.this,"test_01",null,1);
             db =myDataBaseHelper.getWritableDatabase();
 
 

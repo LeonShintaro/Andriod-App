@@ -29,6 +29,7 @@ public class StatusBarUtil {
     @interface ViewType {
     }
 
+
     public static void setStatusBarColor(Activity activity, int colorId) {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -42,10 +43,12 @@ public class StatusBarUtil {
         }
     }
 
+    /**
+     * 设置状态栏透明
+     */
     @TargetApi(19)
     public static void setTranslucentStatus(Activity activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-
             Window window = activity.getWindow();
             View decorView = window.getDecorView();
 
@@ -111,6 +114,7 @@ public class StatusBarUtil {
         }
     }
 
+
     public static boolean setCommonUI(Activity activity, boolean dark) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             View decorView = activity.getWindow().getDecorView();
@@ -130,6 +134,7 @@ public class StatusBarUtil {
         return false;
 
     }
+
 
     public static boolean setFlymeUI(Activity activity, boolean dark) {
         try {
@@ -164,7 +169,7 @@ public class StatusBarUtil {
             int darkModeFlag = field.getInt(layoutParams);
             Method extraFlagField = clazz.getDeclaredMethod("setExtraFlags", int.class, int.class);
             extraFlagField.setAccessible(true);
-            if (dark) {    //状态栏亮色且黑色字体
+            if (dark) {
                 extraFlagField.invoke(window, darkModeFlag, darkModeFlag);
             } else {
                 extraFlagField.invoke(window, 0, darkModeFlag);

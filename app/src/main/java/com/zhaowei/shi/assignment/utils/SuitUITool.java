@@ -17,7 +17,6 @@ public class SuitUITool {
     private static Context mContext;
 
     public SuitUITool(Context mContext) {
-
         this.mContext = mContext.getApplicationContext();
     }
 
@@ -25,7 +24,6 @@ public class SuitUITool {
         if (instance == null) {
             instance = new SuitUITool(context);
         }
-
         scale_width = -1;
         scale_height = -1;
         return instance;

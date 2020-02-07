@@ -15,6 +15,8 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
             "ene string)";
 
     public static  String CREATE_TABLE_ENE="create table ene_list(" +
+            "month string," +
+            "week string," +
             "day string," +
             "ene string)";
 

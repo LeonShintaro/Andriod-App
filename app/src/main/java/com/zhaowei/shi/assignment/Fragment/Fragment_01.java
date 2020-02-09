@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.zhaowei.shi.assignment.R;
 import com.zhaowei.shi.assignment.activity.add_activity;
@@ -44,20 +43,23 @@ public class Fragment_01 extends Fragment implements View.OnClickListener {
         week_temp =c.get(Calendar.WEEK_OF_MONTH);
         year =c.get(Calendar.YEAR);
         month =c.get(Calendar.MONTH);
-        day =c.get(Calendar.DAY_OF_MONTH);//当前时间
+        day =c.get(Calendar.DAY_OF_MONTH);//Current time
 
         datePicker.init(year, month, day, new DatePicker.OnDateChangedListener() {
             @Override
             public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-               Toast.makeText(getContext(),"The Current date is" + year + "-" + (pad(monthOfYear + 1)) +"-"+(pad(dayOfMonth)), Toast.LENGTH_SHORT).show();
+               //Toast.makeText(getContext(),"The Current date is" + year + "-" + (pad(monthOfYear + 1)) +"-"+(pad(dayOfMonth)), Toast.LENGTH_SHORT).show();
                 //Toast.makeText(getContext(),""+year+"-"+month+"-"+day,Toast.LENGTH_SHORT).show();
 
                 month_temp =monthOfYear+1;
 
                 day_temp =dayOfMonth;
                 bt_add.setVisibility(View.VISIBLE);
-            }
+                }
+
         });
+
+
     }
 
     private  String pad(int c){
@@ -76,6 +78,7 @@ public class Fragment_01 extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         if(v.getId() == R.id.bt_add){
             Intent intent =new Intent(getActivity(), add_activity.class);
+
             Bundle bundle =new Bundle();
             bundle.putInt("month",month_temp);
             bundle.putInt("week",week_temp);

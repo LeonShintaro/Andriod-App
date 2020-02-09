@@ -43,21 +43,16 @@ public class StatusBarUtil {
         }
     }
 
-    /**
-     * 设置状态栏透明
-     */
     @TargetApi(19)
     public static void setTranslucentStatus(Activity activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
             View decorView = window.getDecorView();
-
             int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                     | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
             decorView.setSystemUiVisibility(option);
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(Color.TRANSPARENT);
-
             //window.setNavigationBarColor(Color.TRANSPARENT);
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window window = activity.getWindow();
@@ -84,7 +79,6 @@ public class StatusBarUtil {
 
     }
 
-
     public static boolean setStatusBarDarkTheme(Activity activity, boolean dark) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -93,7 +87,7 @@ public class StatusBarUtil {
                 setStatusBarFontIconDark(activity, TYPE_MIUI, dark);
             } else if (OSutil.isFlyme()) {
                 setStatusBarFontIconDark(activity, TYPE_FLYME, dark);
-            } else {//其他情况
+            } else {
                 return false;
             }
 
@@ -101,6 +95,7 @@ public class StatusBarUtil {
         }
         return false;
     }
+
 
     public static boolean setStatusBarFontIconDark(Activity activity, @ViewType int type,boolean dark) {
         switch (type) {
@@ -113,7 +108,6 @@ public class StatusBarUtil {
                 return setCommonUI(activity,dark);
         }
     }
-
 
     public static boolean setCommonUI(Activity activity, boolean dark) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -134,7 +128,6 @@ public class StatusBarUtil {
         return false;
 
     }
-
 
     public static boolean setFlymeUI(Activity activity, boolean dark) {
         try {

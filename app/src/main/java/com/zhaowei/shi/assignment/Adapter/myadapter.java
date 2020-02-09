@@ -1,7 +1,6 @@
 package com.zhaowei.shi.assignment.Adapter;
 
 import android.content.Context;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -14,8 +13,6 @@ import java.util.List;
 
 public class myadapter extends BaseAdapter {
     private List<food_list_q_item> mylist;
-    private LayoutInflater layoutInflater;
-    private int num=0;
     private Context context;
     public myadapter(Context context, List<food_list_q_item> list){
         mylist =list;
@@ -59,7 +56,7 @@ public class myadapter extends BaseAdapter {
             vieholder =(Vieholder) view.getTag();
 
         }
-        //Load data
+        //装在信息
         food_list_q_item bean =mylist.get(position);
         vieholder.ti_tv_01.setText(bean.getName());
         vieholder.ti_tv_02.setText(bean.getNum());

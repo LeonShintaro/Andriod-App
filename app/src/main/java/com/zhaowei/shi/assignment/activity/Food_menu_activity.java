@@ -1,10 +1,12 @@
 package com.zhaowei.shi.assignment.activity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,6 +20,8 @@ public class Food_menu_activity extends AppCompatActivity implements View.OnClic
 
         private MyDataBaseHelper myDataBaseHelper;
         private SQLiteDatabase db;
+
+    private boolean isExit=false;
 
         private ImageView bt_back,bt_config,bt_01_add,bt_01_dl,
                  bt_02_add,bt_02_dl,
@@ -298,8 +302,44 @@ public class Food_menu_activity extends AppCompatActivity implements View.OnClic
             tv_09_03.setText(String.valueOf(num_f[9]));
             tv_10_03.setText(String.valueOf(num_f[10]));
             tv_11_03.setText(String.valueOf(num_f[11]));
+
             db.close();
 
+            db =myDataBaseHelper.getReadableDatabase();
+            String sql ="select * from food_list";
+            Cursor cursor =db.rawQuery(sql,null);
+            if (cursor!=null){
+                while(cursor.moveToNext()){
+                    Log.d("name:",cursor.getString(0));
+                    Log.d("num:",cursor.getString(1));
+                    Log.d("ene:",cursor.getString(2));
+                }
+            }
+            db.close();
+            Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, add_activity.class));finish();
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (isExit) {
+            finish();
+        } else {
+            //Click once then the notification pops up
+            Toast.makeText(this, "Tap again to exit the app", Toast.LENGTH_SHORT).show();
+            isExit = true;
+            new Thread() {
+                @Override
+                public void run() {
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    isExit = false;
+                }
+            }.start();
         }
     }
 

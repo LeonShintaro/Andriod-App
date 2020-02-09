@@ -28,9 +28,9 @@ public class Fragment_02 extends Fragment {
         tv_02 = view.findViewById(R.id.tv_02);
         tv_03 = view.findViewById(R.id.tv_03);
         getdata_M();
-        tv_01.setText(day_ene);
-        tv_02.setText(week_ene);
-        tv_03.setText(month_ene);
+        tv_01.setText(day_ene+"KJ");
+        tv_02.setText(week_ene+"KJ");
+        tv_03.setText(month_ene+"KJ");
         return view;
     }
 
